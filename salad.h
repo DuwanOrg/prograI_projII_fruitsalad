@@ -1,5 +1,7 @@
 #include <iostream>
 #include <graphics.h>
+#include <fstream>
+
 using namespace std;
 
 class Area {
@@ -41,6 +43,7 @@ class Regla{
 	public:
 		Regla(int puntosOriginal, int *tipos);
 		int* gettipos ();
+		int getTipoContador (int tipo);
 		int gettiposContador ();
 		int getpuntosOriginal ();
 		int getpuntosRandom ();
@@ -48,10 +51,10 @@ class Regla{
 
 class Carta{
 	private:
-		int tipo;
 		int reglasContador;
 		Regla *reglas;
 	public:
+		int tipo;
 		Carta (int tipo, Regla *reglas);
 		Regla getRegla (int indice);
 		int getReglasContador ();
@@ -90,6 +93,7 @@ class CartaLista
 		CartaNodo* extraerNodo (int indice);
 		Carta * getCartas ();
 		int getCartaContador ();
+		int getCartaTipoContador(int tipo);
 		CartaLista ();
 };
 
@@ -99,6 +103,7 @@ class Mazo
 		int maxMercado;
 	public:
 		Mazo (int maxMercado);
+		Mazo ();
 		CartaLista mercado; //Lista
 		CartaLista pila; //Lista
 		int getPuntaje ();
@@ -109,21 +114,19 @@ class Mazo
 
 class MazoCentral
 {
-	private:
+	public:
 		Mazo * columna;
 		int columnaContador;
-	public:
 		MazoCentral (int columnas);
 		Mazo getColunma (int indice);
 };
 
 class Jugador
 {
-	private:
+	public:
 		string nombre;
 		string turnoContador;
 		Mazo mano;
-	public:
 		Jugador (string Nombre);
 		
 };
@@ -131,16 +134,23 @@ class Jugador
 class ConstructorMazo 
 {
 	public:
-		cargarJson ();
+		CartaLista cargarCartasJson ();
+		MazoCentral cargarMarzoCentral ();
 };
 
 class GameController
 {
-	private:
+	public:
 		MazoCentral mesa;
 		Jugador * jugadores;
-	public:
+		int JugadoresCotador;
+		int TurnoJugadorIndice;
+		bool PilaBloqueada;
+		int indiceJugadorComputadora
 		void nuevoJugador (string name);
 		void iniJuego ();
 		void crearCartas ();
+		void siguiete ();
+		void tomarCartaPila (int jugador, int columna);
+		void tomarCartaMercado (int jugador, int columna, int indiceMercado);
 };

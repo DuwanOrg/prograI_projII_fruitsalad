@@ -1,0 +1,639 @@
+{
+  "Cartas": [
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": -4
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 3
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": -1
+        },
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": -1
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 4
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": -2
+        },
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 3
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": 1
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 1
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo + Pechuga de pollo"
+          ],
+          "puntos": 5
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Apio + Cebolla"
+          ],
+          "puntos": 5
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Consomé de pollo + Chile dulce"
+          ],
+          "puntos": 5
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo + Pechuga de pollo + Pechuga de pollo"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce + Pechuga de pollo + Consome de pollo"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Maíz dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Apio + Pechuga de pollo + Cebolla"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": -4
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 3
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": -1
+        },
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": -1
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 4
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": -2
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 3
+        },
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 1
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": 1
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Cebolla + Chile dulce"
+          ],
+          "puntos": 5
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Pechuga de pollo + Maíz dulce + Cebolla"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Chile dulce + Maíz  + Consomé de pollo"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Maíz dulce + Maíz dulce + Maíz dulce"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Apio",
+      "reglas": [
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "tipo": "Apio",
+      "reglas": [
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Apio",
+      "reglas": [
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": -4
+        }
+      ]
+    },
+    {
+      "tipo": "Apio",
+      "reglas": [
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 4
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": -2
+        },
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Pechuga de pollo",
+      "reglas": [
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": 3
+        },
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": -1
+        },
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": -1
+        }
+      ]
+    },
+    {
+      "tipo": "Apio",
+      "reglas": [
+        {
+          "tipos": [
+            "Cebolla + Chile dulce + Maíz dulce"
+          ],
+          "puntos": 8
+        }
+      ]
+    },
+    {
+      "tipo": "Cebolla",
+      "reglas": [
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Cebolla",
+      "reglas": [
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": 4
+        },
+        {
+          "tipos": [
+            "Maíz dulce"
+          ],
+          "puntos": -2
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": -2
+        }
+      ]
+    },
+    {
+      "tipo": "Cebolla",
+      "reglas": [
+        {
+          "tipos": [
+            "Consomé de pollo"
+          ],
+          "puntos": 3
+        },
+        {
+          "tipos": [
+            "Pechuga de pollo"
+          ],
+          "puntos": -1
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": -1
+        }
+      ]
+    },
+    {
+      "tipo": "Chile dulce",
+      "reglas": [
+        {
+          "tipos": [
+            "Apio"
+          ],
+          "puntos": 2
+        },
+        {
+          "tipos": [
+            "Cebolla"
+          ],
+          "puntos": 1
+        },
+        {
+          "tipos": [
+            "Chile dulce"
+          ],
+          "puntos": -2
+        }
+      ]
+    }
+  ]
+}

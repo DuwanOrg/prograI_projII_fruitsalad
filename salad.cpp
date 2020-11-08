@@ -77,6 +77,19 @@ Regla::getpuntosRandom()
 	return this->puntosRandom;
 }
 
+int Regla::getTipoContador(int tipo)
+{
+	int contador=0;
+	for (int i=0; i< this->tiposContador; i ++)
+	{
+		if (this->tipos[i]==tipo)
+		{
+			contador++;
+		}
+	}
+	return contador;
+}
+
 /// Programacion de la CARTA
 
 
@@ -294,6 +307,20 @@ Carta* CartaLista::getCartas ()
 		nodo=nodo->siguiente;
 		contador++;
 	}
+	return resultado;
+}
+
+int CartaLista::getCartaTipoContador (int tipo)
+{
+	int contador = 0;
+	CartaNodo* nodo = this->primeraCarta;
+	while (nodo!=NULL)
+	{
+		if (nodo->local.tipo == tipo)
+		{
+			contador ++;
+		}
+	}
 }
 
 //// Programacion del mazo
@@ -305,24 +332,79 @@ Mazo::Mazo (int maxMercado)
 	this->pila=CartaLista();
 }
 
+Mazo::Mazo ()
+{
+	this->maxMercado=36;
+	this->mercado = CartaLista();
+	this->pila=CartaLista();
+}
+
 int Mazo::getPuntaje ()
 {
-	
+	int puntaje = 0;
+	Carta* cartaEnPila = this->pila.getCartas();
+	for (int i =0; i < this->pila.getCartaContador(); i++)
+	{
+		for (int j  = 0; j< cartaEnPila[i].getReglasContador(); j ++)
+		{
+			int aplicarRegla = 0;
+			for (int y = 0; y < cartaEnPila[i].getRegla(j).gettiposContador(); y++)
+			{
+				int tipoContadorEnRegla = cartaEnPila[i].getRegla(j).getTipoContador(cartaEnPila[i].getRegla(j).gettipos()[y]);
+				int tipoContadorenMercado = this->mercado.getCartaTipoContador(cartaEnPila[i].getRegla(j).gettipos()[y]);
+				int tempAplicarRegla = tipoContadorenMercado/tipoContadorEnRegla;
+				if (tempAplicarRegla>aplicarRegla)
+				{
+					aplicarRegla = tempAplicarRegla;
+				}
+			}
+			for (int aplicar = 0; aplicar<aplicarRegla; aplicar++)
+			{
+				puntaje = puntaje+ cartaEnPila[i].getRegla(j).getpuntosRandom();
+			}
+		}
+	}
+	return puntaje;
 }
+
 void Mazo::insertarCartaMercado (Carta nueva)
 {
 	this->mercado.insertarCarta(nueva);
 }
+
 void Mazo::insertarCartaPila (Carta nueva)
 {
 	this->pila.insertarCarta(nueva);
 }
+
 void Mazo::refillMercado ()
 {
 	while (this->mercado.getCartaContador()<this->maxMercado)
 	{
 		this->mercado.insertarCarta(this->pila.extraerUltimaCarta());
 	}
+}
+
+///Programacion del MazoCentral
+
+MazoCentral::MazoCentral (int columnas)
+{
+	this->columnaContador = columnas;
+	this->columna = new Mazo[columnas];
+}
+
+Mazo MazoCentral::getColunma (int indice)
+{
+	return this->columna[indice];
+}
+
+/// Programacion del Jugador
+Jugador::Jugador (string Nombre)
+{
+	this->nombre = Nombre;
+	this->mano = new Mazo();
+	this->turnoContador = 0;
+	this->
 }
 
 
