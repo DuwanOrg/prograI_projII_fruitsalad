@@ -8,7 +8,9 @@ main(){
 //	c1->getRegla()->transformarRegla();
 //	c1->getRegla()->toString();
 	
+	GameController controlador = GameController();
+	controlador.iniJuego("Villa");
 	
-	
+	cout<<controlador.mesa.getColunma(0).pila.getCartaContador();
 }
 

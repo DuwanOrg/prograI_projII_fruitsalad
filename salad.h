@@ -42,6 +42,7 @@ class Regla{
 		
 	public:
 		Regla(int puntosOriginal, int *tipos);
+		Regla();
 		int* gettipos ();
 		int getTipoContador (int tipo);
 		int gettiposContador ();
@@ -118,6 +119,7 @@ class MazoCentral
 		Mazo * columna;
 		int columnaContador;
 		MazoCentral (int columnas);
+		MazoCentral ();
 		Mazo getColunma (int indice);
 };
 
@@ -125,9 +127,10 @@ class Jugador
 {
 	public:
 		string nombre;
-		string turnoContador;
+		int turnoContador;
 		Mazo mano;
 		Jugador (string Nombre);
+		Jugador ();
 		
 };
 
@@ -146,9 +149,10 @@ class GameController
 		int JugadoresCotador;
 		int TurnoJugadorIndice;
 		bool PilaBloqueada;
-		int indiceJugadorComputadora
+		int indiceJugadorComputadora;
+		GameController ();
 		void nuevoJugador (string name);
-		void iniJuego ();
+		void iniJuego (string nombre);
 		void crearCartas ();
 		void siguiete ();
 		void tomarCartaPila (int jugador, int columna);

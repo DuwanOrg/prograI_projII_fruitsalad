@@ -90,6 +90,14 @@ int Regla::getTipoContador(int tipo)
 	return contador;
 }
 
+Regla::Regla()
+{
+	this->puntosOriginal = 0;
+	this->puntosRandom = 0;
+	this->tipos = new int[0];
+	this->tiposContador = 0;
+}
+
 /// Programacion de la CARTA
 
 
@@ -393,18 +401,122 @@ MazoCentral::MazoCentral (int columnas)
 	this->columna = new Mazo[columnas];
 }
 
+MazoCentral::MazoCentral ()
+{
+	this->columnaContador = 3;
+	this->columna = new Mazo[3];
+}
+
 Mazo MazoCentral::getColunma (int indice)
 {
 	return this->columna[indice];
 }
 
+
 /// Programacion del Jugador
-Jugador::Jugador (string Nombre)
+Jugador::Jugador(string Nombre)
 {
 	this->nombre = Nombre;
-	this->mano = new Mazo();
+	this->mano = Mazo();
 	this->turnoContador = 0;
-	this->
+}
+
+Jugador::Jugador()
+{
+	this->nombre = "Default";
+	this->mano = Mazo();
+	this->turnoContador = 0;
+}
+
+/// Programacion del constructor de mazoz
+
+CartaLista ConstructorMazo::cargarCartasJson()
+{
+	CartaLista resultado;
+	resultado = CartaLista();
+	
+	/// Carta 1
+	int * regla0tipos = new int[1];
+	regla0tipos[0] = 1;
+	Regla * reglas0 = new Regla[1];
+	reglas0[0] = Regla(2, regla0tipos);
+	Carta carta0 = Carta(0, reglas0);
+	resultado.insertarCarta(carta0);
+	
+	/// Carta 2
+	int * regla1_1tipos = new int[1];
+	regla1_1tipos[0] = 1;
+	int * regla1_2tipos = new int[1];
+	regla1_2tipos[0] = 2;
+	int * regla1_3tipos = new int[1];
+	regla1_3tipos[0] = 0;
+	Regla * reglas1 = new Regla[3];
+	reglas1[0] = Regla(2, regla1_1tipos);
+	reglas1[1] = Regla(1, regla1_2tipos);
+	reglas1[2] = Regla(-2, regla1_3tipos);
+	Carta carta1 = Carta(0, reglas1);
+	resultado.insertarCarta(carta1);
+		
+	return resultado;
+}
+
+MazoCentral ConstructorMazo::cargarMarzoCentral()
+{
+	int columnas = 3;
+	MazoCentral resultado = MazoCentral(columnas);
+	
+	CartaLista cartas = this->cargarCartasJson();
+	int columna = 0;
+	int cartasContador = cartas.getCartaContador();
+	for (int i = 0 ; i < cartasContador; i++)
+	{
+		resultado.columna[columna].insertarCartaPila(cartas.extraerPrimeraCarta());
+		columna++;
+		if (columna >=columnas)
+		{
+			columnas = 0;	
+		}
+	}
+	return resultado;
+}
+
+
+GameController::GameController ()
+{
+	this->mesa = MazoCentral(3);
+	this->jugadores = new Jugador[2];
+	this->JugadoresCotador = 2;
+	int TurnoJugadorIndice = 0;
+	bool PilaBloqueada = false;
+	int indiceJugadorComputadora = 1;
+}
+
+
+void GameController::iniJuego (string nombre)
+{
+	ConstructorMazo constructor = ConstructorMazo();
+	this->mesa = constructor.cargarMarzoCentral();
+	this->jugadores[0] = Jugador(nombre);
+	this->jugadores[1] = Jugador("PC");
+	
+}
+
+void GameController::siguiete ()
+{
+	for (int i = 0; i < this->mesa.columnaContador; i++)
+	{
+		this->mesa.getColunma(i).refillMercado();
+	}
+}
+
+void GameController::tomarCartaPila (int jugador, int columna)
+{
+	this->jugadores[jugador].mano.insertarCartaPila(this->mesa.columna[columna].pila.extraerUltimaCarta());
+}
+
+void GameController::tomarCartaMercado (int jugador, int columna, int indiceMercado)
+{
+	this->jugadores[jugador].mano.insertarCartaMercado(this->mesa.columna[columna].pila.extraerCarta(indiceMercado));
 }
 
 
