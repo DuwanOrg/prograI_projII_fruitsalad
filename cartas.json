@@ -159,7 +159,7 @@
       "reglas": [
         {
           "tipos": [
-            "Pechuga de pollo + Pechuga de pollo"
+            "Pechuga de pollo", "Pechuga de pollo"
           ],
           "puntos": 5
         }
@@ -170,7 +170,7 @@
       "reglas": [
         {
           "tipos": [
-            "Apio + Cebolla"
+            "Apio", "Cebolla"
           ],
           "puntos": 5
         }
@@ -181,7 +181,7 @@
       "reglas": [
         {
           "tipos": [
-            "Consomé de pollo + Chile dulce"
+            "Consomé de pollo", "Chile dulce"
           ],
           "puntos": 5
         }
@@ -192,7 +192,7 @@
       "reglas": [
         {
           "tipos": [
-            "Pechuga de pollo + Pechuga de pollo + Pechuga de pollo"
+            "Pechuga de pollo", "Pechuga de pollo", "Pechuga de pollo"
           ],
           "puntos": 8
         }
@@ -203,7 +203,7 @@
       "reglas": [
         {
           "tipos": [
-            "Maíz dulce + Pechuga de pollo + Consome de pollo"
+            "Maíz dulce", "Pechuga de pollo", "Consome de pollo"
           ],
           "puntos": 8
         }
@@ -214,7 +214,7 @@
       "reglas": [
         {
           "tipos": [
-            "Apio + Pechuga de pollo + Cebolla"
+            "Apio", "Pechuga de pollo", "Cebolla"
           ],
           "puntos": 8
         }
@@ -390,7 +390,7 @@
       "reglas": [
         {
           "tipos": [
-            "Cebolla + Chile dulce"
+            "Cebolla", "Chile dulce"
           ],
           "puntos": 5
         }
@@ -401,7 +401,7 @@
       "reglas": [
         {
           "tipos": [
-            "Pechuga de pollo + Maíz dulce + Cebolla"
+            "Pechuga de pollo", "Maíz dulce", "Cebolla"
           ],
           "puntos": 8
         }
@@ -412,7 +412,7 @@
       "reglas": [
         {
           "tipos": [
-            "Chile dulce + Maíz  + Consomé de pollo"
+            "Chile dulce", "Maíz ", "Consomé de pollo"
           ],
           "puntos": 8
         }
@@ -423,7 +423,7 @@
       "reglas": [
         {
           "tipos": [
-            "Maíz dulce + Maíz dulce + Maíz dulce"
+            "Maíz dulce", "Maíz dulce", "Maíz dulce"
           ],
           "puntos": 8
         }
@@ -537,7 +537,7 @@
       "reglas": [
         {
           "tipos": [
-            "Cebolla + Chile dulce + Maíz dulce"
+            "Cebolla", "Chile dulce", "Maíz dulce"
           ],
           "puntos": 8
         }

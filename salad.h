@@ -1,6 +1,7 @@
 #include <iostream>
 #include <graphics.h>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -41,7 +42,7 @@ class Regla{
 		int puntosRandom;
 		
 	public:
-		Regla(int puntosOriginal, int *tipos);
+		Regla(int puntosOriginal, int *tipos, int tiposContador);
 		Regla();
 		int* gettipos ();
 		int getTipoContador (int tipo);
@@ -56,8 +57,7 @@ class Carta{
 		Regla *reglas;
 	public:
 		int tipo;
-		Carta (int tipo, Regla *reglas);
-		Regla getRegla (int indice);
+		Carta (int tipo, Regla *reglas, int reglascontador);
 		int getReglasContador ();
 		Regla *getReglas ();
 		Carta ();
@@ -70,7 +70,6 @@ class CartaNodo
 		Carta local;
 		CartaNodo * siguiente;
 		CartaNodo * anterior;
-		
 };
 
 class CartaLista
@@ -93,8 +92,10 @@ class CartaLista
 		Carta extraerCarta (int indice);
 		CartaNodo* extraerNodo (int indice);
 		Carta * getCartas ();
+		Carta MostrarUltima ();
 		int getCartaContador ();
 		int getCartaTipoContador(int tipo);
+		void reordenar();
 		CartaLista ();
 };
 
@@ -120,7 +121,6 @@ class MazoCentral
 		int columnaContador;
 		MazoCentral (int columnas);
 		MazoCentral ();
-		Mazo getColunma (int indice);
 };
 
 class Jugador
@@ -141,6 +141,20 @@ class ConstructorMazo
 		MazoCentral cargarMarzoCentral ();
 };
 
+class Impresor
+{
+	public: 
+		string * tipos;
+		string * tiposAbreviado;
+		int tiposContador;
+		Impresor();
+		string traducirTipo (int i, bool abreviado = false);
+		string traducirRegla (Regla input, bool abreviado = false);
+		string traducirCarta (Carta input, bool abreviado = false);
+		string* traducirCartaReglas (Carta input, bool abreviado = false);
+		
+};
+
 class GameController
 {
 	public:
@@ -157,4 +171,17 @@ class GameController
 		void siguiete ();
 		void tomarCartaPila (int jugador, int columna);
 		void tomarCartaMercado (int jugador, int columna, int indiceMercado);
+};
+
+class Herramienta //Me cago en este compilador
+{
+	public:
+		static string convertToString (int i)
+		{
+			string index;
+			stringstream ss;
+			ss<<i;
+			ss>>index;
+			return index;
+		};
 };
